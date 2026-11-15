@@ -5,34 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ler-gendas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Inter:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Inter:wght@400;500&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20fill%3D%22%231f6f5c%22%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%2F%3E%3Crect%20fill%3D%22%23ffffff%22%20x%3D%2213%22%20y%3D%2222%22%20width%3D%226%22%20height%3D%2214%22%20rx%3D%223%22%2F%3E%3Crect%20fill%3D%22%23ffffff%22%20x%3D%2223%22%20y%3D%2211%22%20width%3D%226%22%20height%3D%2230%22%20rx%3D%223%22%2F%3E%3Crect%20fill%3D%22%23ffffff%22%20x%3D%2233%22%20y%3D%2215%22%20width%3D%226%22%20height%3D%2222%22%20rx%3D%223%22%2F%3E%3Crect%20fill%3D%22%23ffffff%22%20x%3D%2243%22%20y%3D%2223%22%20width%3D%226%22%20height%3D%2212%22%20rx%3D%223%22%2F%3E%3Crect%20fill%3D%22%23ffffff%22%20x%3D%2212%22%20y%3D%2247%22%20width%3D%2240%22%20height%3D%224.5%22%20rx%3D%222.25%22%2F%3E%3Crect%20fill%3D%22%23ffffff%22%20x%3D%2220%22%20y%3D%2255%22%20width%3D%2224%22%20height%3D%224.5%22%20rx%3D%222.25%22%2F%3E%3C%2Fsvg%3E">
 <style>
-:root{--bg:#E9EEF2;--panel:#F7F9FB;--ink:#17212B;--muted:#58656F;--line:#C4CED8;--accent:#1F4FD8;--onaccent:#fff;--mark:#FFE45C;
---ui:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;--txt:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11161C;--panel:#1A222B;--ink:#E6EBF0;--muted:#98A5B3;--line:#2C3743;--accent:#8DACFF;--onaccent:#0E1622;--mark:#5E4F0C;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#11161C;--panel:#1A222B;--ink:#E6EBF0;--muted:#98A5B3;--line:#2C3743;--accent:#8DACFF;--onaccent:#0E1622;--mark:#5E4F0C;color-scheme:dark}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#eef1ef;--card:#ffffff;--tx:#1b2420;--mut:#5f6d66;--bd:#d8dfdb;--ac:#1f6f5c;--acb:#e3f1ec;--onac:#ffffff;--err:#b42318;--t1:#e6f4ee;--t2:#fdf1dc;--t3:#e7edfc;--t4:#fbe9f1;--green:#2f9e78;--amber:#f59f00;--blue:#4c6ef5;--pink:#e64980;--disp:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;--sys:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color-scheme:light;--panel:var(--card);--ink:var(--tx);--muted:var(--mut);--line:var(--bd);--accent:var(--ac);--onaccent:var(--onac);--ui:var(--disp);--txt:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;--mark:#ffe14d}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121714;--card:#1b221e;--tx:#e6ece8;--mut:#9aa8a0;--bd:#2d3832;--ac:#5fc4a8;--acb:#1f3a31;--onac:#0e1a15;--err:#ff8b7e;--t1:#18291f;--t2:#2b2515;--t3:#1a2236;--t4:#2b1c25;color-scheme:dark;--mark:#5e4f0c}}
+:root[data-theme="dark"]{--bg:#121714;--card:#1b221e;--tx:#e6ece8;--mut:#9aa8a0;--bd:#2d3832;--ac:#5fc4a8;--acb:#1f3a31;--onac:#0e1a15;--err:#ff8b7e;--t1:#18291f;--t2:#2b2515;--t3:#1a2236;--t4:#2b1c25;color-scheme:dark;--mark:#5e4f0c}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *,*::before,*::after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 var(--ui);min-height:100vh}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.5 var(--sys);min-height:100vh}
 button,select,input{font:inherit;color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.wrap{max-width:1180px;margin:0 auto;padding:28px 24px 240px}
-h1{font:800 clamp(2.6rem,9vw,4.2rem)/1 var(--ui);letter-spacing:-.04em;margin:0 0 8px}
-.sub{color:var(--muted);margin:0 0 28px;max-width:none;text-align:center;white-space:nowrap}
-.drop{display:block;border:2px dashed var(--line);border-radius:14px;padding:48px 20px;text-align:center;background:var(--panel);cursor:pointer;transition:border-color .15s,background .15s}
-.drop:hover,.drop.over{border-color:var(--accent)}
-.drop strong{display:block;font-size:1.25rem;margin-bottom:4px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px 240px}
+.drop{display:block;background:var(--t1);border:2px dashed var(--green);border-radius:14px;padding:44px 20px;text-align:center;cursor:pointer;transition:border-color .15s,background .15s}
+.drop:hover,.drop.over{border-color:var(--accent);background:var(--acb)}
+.drop strong{display:block;font:700 1.25rem/1.2 var(--disp);margin-bottom:6px}
 .drop span{color:var(--muted)}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;color:var(--muted);font-size:.95rem}
 .bar b{color:var(--ink);font-weight:700;overflow-wrap:anywhere}
-.btn{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:8px 14px;cursor:pointer;font-weight:500}
+.btn{border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:8px 14px;cursor:pointer;font-weight:500}
 .btn:hover{border-color:var(--accent)}
-#reader{font-family:var(--txt);font-size:var(--fs,18px);line-height:1.8;text-align:justify;hyphens:none;-webkit-hyphens:none;word-break:normal;overflow-wrap:normal}
+#reader{background:var(--card);border:1px solid var(--bd);border-top:4px solid var(--pink);border-radius:12px;padding:22px 26px;font-family:var(--txt);font-size:var(--fs,18px);line-height:1.8;text-align:justify;hyphens:none;-webkit-hyphens:none;word-break:normal;overflow-wrap:normal}
 #reader span{border-radius:4px;cursor:pointer;padding:1px 0;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 #reader span:hover{text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:4px}
 #reader span.on{background:var(--mark)}
-.dock{position:fixed;left:0;right:0;bottom:0;background:var(--panel);border-top:1px solid var(--line);padding:14px 20px calc(14px + env(safe-area-inset-bottom,0px))}
+#reader span.hit{box-shadow:inset 0 -2px 0 var(--accent)}
+.dock{position:fixed;left:0;right:0;bottom:0;background:var(--panel);border-top:4px solid var(--blue);box-shadow:0 -6px 20px rgba(0,0,0,.07);padding:14px 20px calc(14px + env(safe-area-inset-bottom,0px))}
 .dock-in{max-width:1180px;margin:0 auto;display:grid;gap:12px}
 .row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 14px}
 .play{width:56px;height:56px;border-radius:50%;border:0;background:var(--accent);color:var(--onaccent);font-size:1.4rem;cursor:pointer;display:grid;place-items:center}
@@ -42,42 +40,46 @@ h1{font:800 clamp(2.6rem,9vw,4.2rem)/1 var(--ui);letter-spacing:-.04em;margin:0 
 .pos{color:var(--muted);font-size:.9rem;font-variant-numeric:tabular-nums;min-width:11ch;text-align:right}
 .field{display:flex;align-items:center;gap:8px}
 .field label{color:var(--muted);font-size:.9rem}
-select{max-width:230px;border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:8px 10px}
+select{max-width:230px;border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:8px 10px}
 .speed{display:flex;align-items:center;gap:6px}
 .speed output{min-width:4.6ch;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
 .hint{margin:0;color:var(--muted);font-size:.85rem;text-align:center}
-kbd{font:600 .85rem var(--ui);border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:1px 7px;background:var(--bg)}
+kbd{font:600 .85rem var(--sys);border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:1px 7px;background:var(--bg)}
 .msg{color:var(--muted);margin:0 0 14px}
-.brand{display:flex;align-items:center;justify-content:center;gap:14px;margin:0 0 8px}
-.brand h1{margin:0}
-.brand svg{width:clamp(46px,11vw,66px);height:auto;flex:none}
-.logo-bg{fill:var(--accent)}.logo-fg{fill:var(--onaccent)}
 .search{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;align-items:center;gap:8px;background:var(--bg);padding:8px 0;margin-bottom:12px}
-.search input{flex:1;min-width:0;border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:9px 12px}
+.search input{flex:1;min-width:0;border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:9px 12px}
 .search output{color:var(--muted);font-size:.9rem;white-space:nowrap}
-#reader span.hit{box-shadow:inset 0 -2px 0 var(--accent)}
 .modal{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:20px;background:rgba(10,15,20,.6)}
-.modal-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px;max-width:440px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
-.modal-card h2{font:800 1.7rem/1.15 var(--ui);letter-spacing:-.02em;margin:0 0 12px}
+.modal-card{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--amber);border-radius:14px;padding:28px;max-width:440px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.modal-card h2{font:800 1.6rem/1.15 var(--disp);letter-spacing:-.02em;margin:0 0 12px}
 .modal-card p{margin:0 0 22px}
-.cta{border:0;background:var(--accent);color:var(--onaccent);border-radius:10px;padding:11px 22px;font-weight:700;cursor:pointer}
+.cta{border:0;background:var(--accent);color:var(--onaccent);border-radius:8px;padding:11px 22px;font-weight:700;cursor:pointer}
 .or{color:var(--muted);margin:24px 0 10px;text-align:center}
-#paste{display:block;width:100%;min-height:150px;resize:vertical;border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:14px;font:400 1rem/1.6 var(--txt)}
+#paste{display:block;width:100%;min-height:150px;resize:vertical;border:1px solid var(--line);border-top:4px solid var(--amber);background:var(--t2);border-radius:12px;padding:14px;font:400 1rem/1.6 var(--txt)}
 #pastebox .cta:disabled{opacity:.45;cursor:not-allowed}
 #pastebox .cta{margin-top:12px}
 [hidden]{display:none!important}
 @media (max-width:560px){.pos{display:none}}
-@media (max-width:820px){.sub{white-space:normal}}
+/* ===== identidade da família ===== */
+body{border-top:5px solid;border-image:linear-gradient(90deg,#2f9e78,#f59f00,#4c6ef5,#e64980) 1}
+.fh{text-align:center;padding-top:26px;padding-bottom:18px}
+.fh .brand{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 6px}
+.fh .brand svg{width:clamp(40px,8vw,48px);height:auto;flex:none}
+.fh h1{margin:0;font:800 clamp(1.75rem,4.6vw,2.2rem)/1.05 var(--disp);letter-spacing:-.03em;color:var(--tx)}
+.fh .sub{margin:0 auto;max-width:64ch;color:var(--mut);font-size:1rem;line-height:1.45}
+.fh .note{margin:6px auto 0;max-width:64ch;color:var(--mut);font-size:.85rem;line-height:1.4}
+.logo-bg{fill:var(--ac)}.logo-fg{fill:var(--onac)}
+.logo-st{fill:none;stroke:var(--onac);stroke-linecap:round;stroke-linejoin:round}
+.logo-ck{fill:none;stroke:var(--ac);stroke-linecap:round;stroke-linejoin:round}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="brand">
-    <svg viewBox="0 0 64 64" aria-hidden="true"><rect class="logo-bg" width="64" height="64" rx="16"/><rect class="logo-fg" x="13" y="22" width="6" height="14" rx="3"/><rect class="logo-fg" x="23" y="11" width="6" height="30" rx="3"/><rect class="logo-fg" x="33" y="15" width="6" height="22" rx="3"/><rect class="logo-fg" x="43" y="23" width="6" height="12" rx="3"/><rect class="logo-fg" x="12" y="47" width="40" height="4.5" rx="2.25"/><rect class="logo-fg" x="20" y="55" width="24" height="4.5" rx="2.25"/></svg>
-    <h1>Ler-gendas</h1>
-  </div>
-  <p class="sub">Carregue uma legenda ou cole um texto e ouça tudo em voz alta para achar erros de revisão.</p>
+  <header class="fh">
+  <div class="brand"><svg viewBox="0 0 64 64" aria-hidden="true"><rect class="logo-bg" width="64" height="64" rx="16"/><rect class="logo-fg" x="13" y="22" width="6" height="14" rx="3"/><rect class="logo-fg" x="23" y="11" width="6" height="30" rx="3"/><rect class="logo-fg" x="33" y="15" width="6" height="22" rx="3"/><rect class="logo-fg" x="43" y="23" width="6" height="12" rx="3"/><rect class="logo-fg" x="12" y="47" width="40" height="4.5" rx="2.25"/><rect class="logo-fg" x="20" y="55" width="24" height="4.5" rx="2.25"/></svg><h1>Ler-gendas</h1></div>
+  <p class="sub">Carregue uma legenda ou cole um texto<br/> e ouça tudo em voz alta para achar erros de revisão.</p>
+</header>
 
   <label class="drop" id="drop" for="file">
     <strong>Solte aqui um arquivo de legenda</strong>
