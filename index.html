@@ -16,7 +16,7 @@ html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.5 var(--sys);min-height:100vh}
 button,select,input{font:inherit;color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px 240px}
+.wrap{max-width:1050px;margin:0 auto;padding:0 20px 240px}
 .drop{display:block;background:var(--t1);border:2px dashed var(--green);border-radius:14px;padding:44px 20px;text-align:center;cursor:pointer;transition:border-color .15s,background .15s}
 .drop:hover,.drop.over{border-color:var(--accent);background:var(--acb)}
 .drop strong{display:block;font:700 1.25rem/1.2 var(--disp);margin-bottom:6px}
@@ -31,7 +31,7 @@ button,select,input{font:inherit;color:inherit}
 #reader span.on{background:var(--mark)}
 #reader span.hit{box-shadow:inset 0 -2px 0 var(--accent)}
 .dock{position:fixed;left:0;right:0;bottom:0;background:var(--panel);border-top:4px solid var(--blue);box-shadow:0 -6px 20px rgba(0,0,0,.07);padding:14px 20px calc(14px + env(safe-area-inset-bottom,0px))}
-.dock-in{max-width:1180px;margin:0 auto;display:grid;gap:12px}
+.dock-in{max-width:1010px;margin:0 auto;display:grid;gap:12px}
 .row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 14px}
 .play{width:56px;height:56px;border-radius:50%;border:0;background:var(--accent);color:var(--onaccent);font-size:1.4rem;cursor:pointer;display:grid;place-items:center}
 .play:disabled,.btn:disabled{opacity:.45;cursor:not-allowed}
@@ -72,13 +72,20 @@ body{border-top:5px solid;border-image:linear-gradient(90deg,#2f9e78,#f59f00,#4c
 .logo-st{fill:none;stroke:var(--onac);stroke-linecap:round;stroke-linejoin:round}
 .logo-ck{fill:none;stroke:var(--ac);stroke-linecap:round;stroke-linejoin:round}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ===== rodapé da família ===== */
+footer.ft{text-align:center;color:var(--mut);font-size:.9rem;line-height:1.5;padding:28px 20px 32px;max-width:none}
+footer.ft p{margin:0}footer.ft p+p{margin-top:6px}
+footer.ft a{color:var(--ac);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.fh .sub{max-width:none;white-space:nowrap}
+@media (max-width:900px){.fh .sub{white-space:normal}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="fh">
   <div class="brand"><svg viewBox="0 0 64 64" aria-hidden="true"><rect class="logo-bg" width="64" height="64" rx="16"/><rect class="logo-fg" x="13" y="22" width="6" height="14" rx="3"/><rect class="logo-fg" x="23" y="11" width="6" height="30" rx="3"/><rect class="logo-fg" x="33" y="15" width="6" height="22" rx="3"/><rect class="logo-fg" x="43" y="23" width="6" height="12" rx="3"/><rect class="logo-fg" x="12" y="47" width="40" height="4.5" rx="2.25"/><rect class="logo-fg" x="20" y="55" width="24" height="4.5" rx="2.25"/></svg><h1>Ler-gendas</h1></div>
-  <p class="sub">Carregue uma legenda ou cole um texto<br/> e ouça tudo em voz alta para achar erros de revisão.</p>
+  <p class="sub">Carregue uma legenda ou cole um texto e ouça tudo em voz alta para achar erros de revisão.</p>
 </header>
 
   <label class="drop" id="drop" for="file">
@@ -107,6 +114,7 @@ body{border-top:5px solid;border-image:linear-gradient(90deg,#2f9e78,#f59f00,#4c
     <p class="msg" id="msg" hidden></p>
     <div id="reader" aria-live="off"></div>
   </div>
+  <footer class="ft"><p>Veja mais ferramentas úteis para legendagem clicando <a href="https://matmaggi.github.io/subtools/">aqui</a>.</p></footer>
 </div>
 
 <div class="dock">
