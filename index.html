@@ -52,12 +52,13 @@ kbd{font:600 .85rem var(--sys);border:1px solid var(--line);border-bottom-width:
 .modal{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:20px;background:rgba(10,15,20,.6)}
 .modal-card{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--amber);border-radius:14px;padding:28px;max-width:440px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
 .modal-card h2{font:800 1.6rem/1.15 var(--disp);letter-spacing:-.02em;margin:0 0 12px}
-.modal-card p{margin:0 0 22px}
+.modal-card p{margin:0 0 22px;text-align:justify;hyphens:none;-webkit-hyphens:none;word-break:normal;overflow-wrap:normal}
+.modal-card .cta{display:block;margin:0 auto}
 .cta{border:0;background:var(--accent);color:var(--onaccent);border-radius:8px;padding:11px 22px;font-weight:700;cursor:pointer}
 .or{color:var(--muted);margin:24px 0 10px;text-align:center}
 #paste{display:block;width:100%;min-height:150px;resize:vertical;border:1px solid var(--line);border-top:4px solid var(--amber);background:var(--t2);border-radius:12px;padding:14px;font:400 1rem/1.6 var(--txt)}
 #pastebox .cta:disabled{opacity:.45;cursor:not-allowed}
-#pastebox .cta{margin-top:12px}
+#pastebox .cta{display:block;margin:12px auto 0}
 [hidden]{display:none!important}
 @media (max-width:560px){.pos{display:none}}
 /* ===== identidade da família ===== */
